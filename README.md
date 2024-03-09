@@ -2,8 +2,8 @@
 
 ## 開発者一覧
 ・https://github.com/HinaTezuka<br>
-・https://github.com/orgs/teamdev-G/people/kolomame<br>
-・https://github.com/orgs/teamdev-G/people/tontatonta<br>
+・https://github.com/kolomame<br>
+・https://github.com/tontatonta<br>
 
 ## 使用技術
 <img src="https://img.shields.io/badge/-Html5-E34F26.svg?logo=html5&style=plastic">
