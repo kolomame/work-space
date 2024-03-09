@@ -458,7 +458,8 @@ document.addEventListener('DOMContentLoaded', function() {
       ArrowRight: () => right(position),
       ArrowLeft: () => left(position),
       ArrowUp: () => rotate(position),
-      ArrowDown: () => under(field, position)
+      ArrowDown: () => under(field, position),
+      "h": () => expectation(field, position) //spacekeyで一番下に落下
   };
   document.addEventListener("keydown", function (event) {
     if (hashmap[event.key]) {
