@@ -548,6 +548,7 @@ document.addEventListener('DOMContentLoaded', function() {
       startButton.innerText = 'Pause';
       if (isSoundOn == true) {
         gameSound.play();
+        gameSound.loop = true;
       }
     }
     isPaused = !isPaused;
@@ -559,6 +560,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // プレイ中のデフォルト音楽
   const gameSound = document.getElementById("gameSound");
+  gameSound.loop = false;
   // ゲームオーバー時の効果音
   const gameOverSound = document.getElementById("gameOver");
   // 横一列揃った時の効果音
@@ -579,6 +581,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // loopInterval 関数内の setTimeout を条件付きで呼び出す
   function loopInterval() {
     if (!isPaused) {
+      gameSound.loop = true;
       // 一時停止中でない場合にのみ自動落下を実行
       if (autodown() === true) {
         loop = setTimeout(loopInterval, speed);
