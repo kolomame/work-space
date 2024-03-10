@@ -200,6 +200,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //回転
   function rotate(position){
+      if (isSoundOn == true){
+        rotatingSound.play();
+      }
       newPosition = []
       let centerx = 0
       let centery = 0
@@ -215,8 +218,8 @@ document.addEventListener('DOMContentLoaded', function() {
           let Y = Math.floor(y*Math.cos(Math.PI/2) + x*Math.sin(Math.PI/2) + (centery/4)+0.9)
           newPosition.push([X,Y])
       }
-      newPosition = revisePositionIfOverflow(newPosition)
-      return newPosition
+      newPosition = revisePositionIfOverflow(newPosition);
+      return newPosition;
   }
 
   /* テトリミノのx, y座標のはみ出している部分を見つける(あるかどうかも含めて)。
@@ -566,6 +569,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const gameOverSound = document.getElementById("gameOver");
   // 横一列揃った時の効果音
   const clearingALineSound = document.getElementById("clearingALine");
+  // テトリミノが回転した時の効果音
+  const rotatingSound = document.getElementById("rotatingSound");
+  // 新しくテトリミノが落ちてくる時の効果音（自動落下開始時）
+  const autoDownSound = document.getElementById("autoDownSound");
   let isSoundOn = false;
   const soundBottun = document.getElementById("isGameSoundOn");
   soundBottun.addEventListener('click', function() {
@@ -622,6 +629,9 @@ document.addEventListener('DOMContentLoaded', function() {
         nextlist = nextTetrimino();
         next = nextlist[0]
         nextRandomNumber = nextlist[1]
+        if (isSoundOn == true) {
+          autoDownSound.play();
+        }
         loopInterval();
       }
     } else {
