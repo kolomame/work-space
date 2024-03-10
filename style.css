@@ -10,6 +10,26 @@ body {
     background-color: aquamarine;
 }
 
+/* ボタンの基本スタイル */
+#start-button, #isGameSoundOn{
+    display: inline-block;
+    /* padding: 10px 10px; */
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color:rgba(0, 136, 255, 0.889);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* アニメーションを追加 */
+}
+  
+/* ボタンにマウスを乗せた時のスタイル */
+#start-button:hover, #isGameSoundOn:hover {
+    background-color:rgb(0, 255, 64);
+    color: black;
+} 
+
 .container {
     display: flex;
     justify-content: center;
