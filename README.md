@@ -14,7 +14,8 @@ URL：https://teamdev-g.github.io/work-space/
 ## 概要
 
 ### 画面イメージ
-![スクリーンショット 2024-03-09 18 47 24](https://github.com/teamdev-G/work-space/assets/101682528/b15f01bc-aea7-4ecb-b8d3-c7d15cdf905d)
+![スクリーンショット 2024-03-10 16 07 37](https://github.com/teamdev-G/work-space/assets/101682528/19299c37-2c28-4595-8e1b-30724b992cbf)
+
 
 ### 基本機能
 ・ブロックの操作（左右・下・回転）<br>
