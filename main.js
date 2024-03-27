@@ -94,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
               field[j][k] = field[j-1][k]
           }
       }
-      field[0].fill(0)  //0 or i
+      field[0].fill(0)
   }
 
-  //指定された座標が1or0
+
   //衝突判定
   //衝突したらTrue
   function judge(x, y, field){
