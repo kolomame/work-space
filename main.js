@@ -214,8 +214,8 @@ document.addEventListener('DOMContentLoaded', function() {
       for (let j = 0; j < position.length; j++){
           let x = position[j][0]-(centerx/4)
           let y = position[j][1]-(centery/4)
-          let X = Math.round(x*Math.cos(Math.PI/2) - y*Math.sin(Math.PI/2) + (centerx/4))
-          let Y = Math.round(y*Math.cos(Math.PI/2) + x*Math.sin(Math.PI/2) + (centery/4))
+          let X = Math.floor(x*Math.cos(Math.PI/2) - y*Math.sin(Math.PI/2) + (centerx/4)+0.9)
+          let Y = Math.floor(y*Math.cos(Math.PI/2) + x*Math.sin(Math.PI/2) + (centery/4)+0.9)
           newPosition.push([X,Y])
       }
       newPosition = revisePositionIfOverflow(newPosition);
